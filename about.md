@@ -11,7 +11,7 @@ layout: page
 <p>After living in Manhattan for 16 years, I currently live in Maryland, right outside Washington, DC with my wife and two amazing children.</p>
 
 <div class="container">
-	<div class="column" id="left">
+	<div class="column">
 		<h2>Technical Skills</h2>
 		<ul class="skill-list">
 			<li>Python</li>
@@ -27,7 +27,7 @@ layout: page
 			<li>Agile / Scrum</li>
 		</ul>
 	</div>
-	<div clas="column" id="right">
+	<div class="column" id="right">
 	<h2>Favorite Python Packages
 		<ul class="python-list">
 			<li>NumPy</li>
