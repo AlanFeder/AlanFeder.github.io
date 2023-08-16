@@ -28,7 +28,7 @@ layout: page
 		</ul>
 	</div>
 	<div class="column" id="right">
-	<h2>Favorite Python Packages
+	<h2>Favorite Python Packages</h2>
 		<ul class="python-list">
 			<li>NumPy</li>
 			<li>pandas</li>
@@ -44,7 +44,7 @@ layout: page
 			<li>altair</li>
 			<li>streamlit</li>
 		</ul>
-	<h2>Favorite R Packages
+	<h2>Favorite R Packages</h2>
 		<ul class="r-list">
 			<li>dplyr</li>
 			<li>tidyr</li>
