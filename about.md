@@ -4,42 +4,21 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Welcome! I am a data scientist with 10+ years of experience in Machine Learning, Artificial Intelligence, Statistics, and Data Science.  Most recently, I worked as a Senior Principal Data Scientist at Invesco for the past 5 years.  Previously, I worked as a data scientist at AIG (on the "Science" team).  Before that, I had worked as a Casualty Pricing Actuary at Swiss Re, passing the first 5 exams (only missing one to receive the ACAS). </p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I received Bachelors and Masters degrees from Columbia University, with a BA in Mathematics (concentrated in Economics) and an MA in Statistics.</p>
 
-<h2>Skills</h2>
+<p>After living in Manhattan for 16 years, I currently live in Maryland, right outside Washington, DC with my wife and two amazing children.</p>
+
+<h2>Technical Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
 	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>SQL (Snowflake, Postgres)</li>
+	<li>R</li>
+	<li>AWS (S3, EC2, Athena, Sagemaker)</li>
+	<li>Linux</li>
+	<li>Airflow</li>
+	<li>Agile / Scrum</li>
 </ul>
 
-<h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul>
