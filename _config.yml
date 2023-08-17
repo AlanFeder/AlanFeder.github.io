@@ -35,12 +35,12 @@ permalink: /:title/
 #   categories: [] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: alanfeder
-twitter: AlanFeder
+#facebook: alanfeder
 #instagram: myinstagram
 linkedin: AlanFeder
 github: AlanFeder
 email: alanfeder@gmail.com
+twitter: AlanFeder
 
 authors:
   johndoe:
