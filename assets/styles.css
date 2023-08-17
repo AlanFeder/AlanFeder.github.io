@@ -1,13 +1,15 @@
 .container {
     display: flex;
-    justify-content: space-between; /* Distributes the columns evenly with space in between */
-    padding: 20px;
+    justify-content: space-between;
 }
 
 .column {
-    box-sizing: border-box; /* This ensures padding and border are included in total width */
-    flex: 1; /* Allows columns to grow and shrink */
-    padding: 20px;
-    border: 1px solid #ddd;
-    min-height: 300px; /* You can adjust this or remove it */
+    box-sizing: border-box;
+    flex: 1;
+    padding: 0 20px;
+    margin-right: 10px;
+}
+
+.column:last-child {
+    margin-right: 0;
 }
