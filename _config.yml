@@ -45,7 +45,7 @@ email: alanfeder@gmail.com
 authors:
   johndoe:
     name: AlanFeder
-    bio: A Man who travels the world eating noodles
+    bio: An experienced data scientist looking for his next adventure
     external-image: false
     picture: assets/images/profile.jpg
     linkedin: AlanFeder
@@ -71,7 +71,7 @@ about: true
 # blog: true
 
 # do you want to show the "read time" of the posts?
-read-time: true
+read-time: false
 
 # do you want to show the "tags" inside the posts?
 # show-tags: true
@@ -101,7 +101,7 @@ defaults:
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
-  - jekyll-feed
+#  - jekyll-feed
   - jemoji
   - jekyll-paginate-v2
 
