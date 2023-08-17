@@ -17,8 +17,9 @@ dark-theme: auto
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
-resume-external: true
-resume-url: https://drive.google.com/file/d/1NgTzbKjCcOY5K4CwwgV95pzn9ZYqIgGq/view?usp=sharing
+resume-external: false
+resume-url: assets/Alan_Resume_base.pdf
+#https://drive.google.com/file/d/1NgTzbKjCcOY5K4CwwgV95pzn9ZYqIgGq/view?usp=sharing
 
 url: https://AlanFeder.github.io
 # your url: https://USERNAME.github.io
