@@ -5,7 +5,7 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>Welcome! I am a data scientist with 10+ years of experience in Machine Learning, Artificial Intelligence, Statistics, and Data Science.  </p>
-<p>I am currently searching for my next professional adventure in the data science world.  I have expertise in using machine learning and data science to solve real-world problems, working with business partners to craft projects and products that empower them to succeed.  In addition to training high-performing machine learning and statistical models, I am passionate about using data visualization to express the ML outputs and insights in ways that allow clients to understand what their data is telling them.</p>
+<p>I am currently searching for my next professional adventure in the data science world.  I have expertise in using machine learning and data science to solve real-world problems, working with business partners to craft projects and products that empower them to succeed.  My best professional moments have been when successfully translating the business needs into machine learning code, and then using data visualization and analytics to express the technical outputs and insights in ways that allow our partners to understand what the data is telling them and how it relates to their goals.</p>
 <p>I currently live in Maryland, right outside Washington, DC.  I am open to positions either in the DC area or those that are remote. </p>
 
 
