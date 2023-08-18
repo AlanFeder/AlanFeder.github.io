@@ -3,10 +3,22 @@ layout: page
 title: Data Science Presentations & Publications
 ---
 
-<h1>Data Science Presentations</h1>
+## Table of Contents
+
+- [Presentations](#presentations)
+  - [NLP in Finance](#dssalon1)
+  - [Categorical Embeddings](#rstudio)
+  - [Machine Learning Interpretability](#dssalon2)
+- [Publications](#publications)
+  - [Stocks move on surprises](#riskreward)
+  - [Q&A With Alan Feder](#blog1)
+
+
+# Presentations
 
 <!-- <div class="container">
 	<div class="column" id="left"> -->
+<a id="dssalon1"></a>
 <p><b><a href="https://www.youtube.com/watch?v=LoivGTvydBo">NLP in Finance: Beyond Predicting Alpha</a></b>, Data Science Salon, February 2022</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LoivGTvydBo" title="YouTube video player" frameborder="0" style="display: block; margin-left: auto; margin-right: auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
 <small>As NLP has exploded within the world of Data Science and Machine Learning, it is now everywhere in finance as well. Many of us have heard about using NLP to try to outperform the market and predict stock prices. However, NLP is much more versatile than that, and has many other uses as well throughout the finance world. In this talk, I explore a number of methodologies within NLP, explaining how they are being used in finance to help professionals do their job more efficiently and effectively.</small>   
@@ -14,6 +26,7 @@ title: Data Science Presentations & Publications
 ***
 <!-- </div>
 <div class="column" id="right">-->
+<a id="rstudio"></a>
 <p><b><a href="https://posit.co/resources/videos/categorical-embeddings-new-ways-to-simplify-complex-data/">Categorical Embeddings: New Ways to Simplify Complex Data</a></b>, rstudio::global(2021), January 2021</p>
 <iframe src="https://fast.wistia.net/embed/iframe/6kt8p3tpuq" width="560" height="315" style="display: block; margin-left: auto; margin-right: auto" frameborder="0" allowfullscreen></iframe>
 <p>Categorical embeddings are a relatively new method, utilizing methods popularized in Natural Language Processing that help models solve this problem and can help you understand more about the categories themselves.</p>
@@ -24,11 +37,19 @@ title: Data Science Presentations & Publications
 <small>While there are a number of online tutorials on how to use Keras (usually in Python) to create these embeddings, this talk uses <a href="https://embed.tidymodels.org/reference/step_embed.html">`embed::step_embed()`</a>, an extension of the `recipes` package, to create the embeddings.</small>
 
 ***
-
+<a id="dssalon2"></a>
 <p><b><a href="https://www.youtube.com/watch?v=CfCHI8d8oYg">Machine Learning Interpretability: How to Understand what your ML Model is Doing</a></b>, Data Science Salon, January 2021</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CfCHI8d8oYg" title="YouTube video player" frameborder="0" style="display: block; margin-left: auto; margin-right: auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <small>When building predictive machine learning models, many data scientists feel a need to choose between a traditional regression model and a complex model that performs better but is more of an inscrutable black box.  In this talk, I will show a number of methods that let us understand what drives the complex models without having to sacrifice accuracy.</small>
 
-***
 <!--</div>
 </div> -->
+# Publications
+<a id="riskreward"></a>
+<p><b><a href="https://www.invesco.com/content/dam/invesco/emea/en/pdf/Risk_and_Reward_Q3_2022.pdf#page=21">
+Stocks move on surprises: Using sentiment information for active portfolio management</a></b>, Risk & Reward, vol. Q3 2022, Invesco, 14 Oct. 2022, pp. 21-25</p>
+
+***
+<a id="blog1"></a>
+<p><b><a href="https://www.mattstabile.com/blog/qampa-with-alan-feder-5-questions-for-a-data-scientist">
+Q&A With Alan Feder // 5 Questions for a Data Scientist</a></b>, Matt Stabile Blog, January 8, 2021</p>
