@@ -13,3 +13,12 @@
 .column:last-child {
     margin-right: 0;
 }
+
+code.language-plaintext.highlighter-rouge {
+    background-color: #2d2d2d; /* Change to desired dark gray color */
+    color: #f8f8f8; /* Adjust text color if needed */
+    border: none; /* Remove if there's any border */
+    padding: 2px 4px; /* Add some padding for better appearance */
+}
+
+
