@@ -27,7 +27,7 @@ url: https://AlanFeder.github.io
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: 'G-SSF5STP0H6'
 
 # # if you don't want comments in your posts, leave categories empty
 # disqus:
