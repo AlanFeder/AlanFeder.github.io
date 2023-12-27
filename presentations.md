@@ -34,7 +34,10 @@ title: Data Science Presentations & Publications
 	<div class="column" id="left"> -->
 <a id="dssalon1"></a>
 <p><b><a href="https://www.youtube.com/watch?v=LoivGTvydBo">NLP in Finance: Beyond Predicting Alpha</a></b>, Data Science Salon, February 2022</p>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LoivGTvydBo" title="YouTube video player" frameborder="0" style="display: block; margin-left: auto; margin-right: auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+<div style="text-align:center;">
+<iframe src="https://www.youtube-nocookie.com/embed/LoivGTvydBo" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQOL0_rqLuH0jR_4MlE68KeglAxn0ka0gkzFIEUHs88PF9R85D10bLPOBjwyzDLIGDL6PCsjplwh0a3/embed?start=false&loop=false&delayms=3000" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
 <small>As NLP has exploded within the world of Data Science and Machine Learning, it is now everywhere in finance as well. Many of us have heard about using NLP to try to outperform the market and predict stock prices. However, NLP is much more versatile than that, and has many other uses as well throughout the finance world. In this talk, I explore a number of methodologies within NLP, explaining how they are being used in finance to help professionals do their job more efficiently and effectively.</small>   
 
 ***
