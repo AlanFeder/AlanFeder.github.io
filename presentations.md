@@ -27,7 +27,7 @@ title: Data Science Presentations & Publications
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwQ6qAwszS9-6W9ZyC7YqCoDPHTRsdUsGQyxn9CZuy9clIXVJra7oT6JiDZeUFZohdyMIr25pCU_Ft/embed?start=false&loop=false&delayms=3000" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
-**Demo App**: [Ask Questions of Previous Bethesda Data Science Speakers with ChatGPT!](https://rag-bethesda-ds.alanfeder.com/) *Note: You need to input an OpenAI API Key to use it*
+**Demo App**: [Ask Questions of Previous Bethesda Data Science Speakers with ChatGPT!](https://rag-bethesda-ds.alanfeder.com/) <small>*Note: You need to input an OpenAI API Key to use it*</small>    
 <small>As the adoption of Large Language Models (LLMs) like ChatGPT has increased over the past year, there's been a growing interest in using these technologies to query existing documents and datasets. However, a notable challenge with ChatGPT is its tendency to hallucinate (aka "make stuff up"), leading to reliability issues. Furthermore, developing a custom chatbot is impossible for everyone except the largest tech companies. This has brought Retrieval-Augmented Generation (RAG) to the forefront as a solution to these issues. In this presentation, I provide an overview of RAG, explain how it operates, and discuss the essentials for creating your own RAG system.</small>   
 
 ***
