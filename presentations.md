@@ -6,7 +6,8 @@ title: Data Science Presentations & Publications
 ## Table of Contents
 
 - [Presentations](#presentations)
-  - [RAGs to Riches: ChatGPT](#ragbethesda)
+  - [RAGtime in the Big Apple: Chat with a Decade of NYR Talks](#nyr-rag)
+  - [RAGs to Riches: Using ChatGPT to Query Documents & Limit Hallucinations](#ragbethesda)
   - [NLP in Finance](#dssalon1)
   - [Categorical Embeddings](#rstudio)
   - [Machine Learning Interpretability](#dssalon2)
@@ -17,6 +18,20 @@ title: Data Science Presentations & Publications
 
 # Presentations
 
+<!-- <div class="container">
+	<div class="column" id="left"> -->
+<a id="nyr-rag"></a>
+<p><b>RAGtime in the Big Apple: Chat with a Decade of NYR Talks </b>, New York R Conference, May 2024</p>
+
+<div style="text-align:center;">
+<!-- <iframe src="https://www.youtube-nocookie.com/embed/0i_7Cn31VrU" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQiXhkMhzYrIcW6G0rx-E3MInjKVG10RCjS2sYRmzZYTRn1zglVm81wNqxC9DIY_RB5-nOUSdWRl8q9/pub?start=false&loop=false&delayms=3000&slide=id.g27181c0a4d9_1_0" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+**Demo App**: [Chat With a Decade of Previous NYR Talks](https://nyr.alanfeder.com/) <small>*Note: You need to input an OpenAI API Key to use it*</small>    
+<small>As the adoption of Large Language Models (LLMs) like ChatGPT has increased over the past year, there's been a growing excitement about using these technologies to query existing documents and datasets. However, training your own LLM chatbot from scratch is impossible for everyone except the largest tech companies. Retrieval-Augmented Generation (RAG) is a versatile method for addressing these challenges. I will show how this works with a live demo exploring the past 10 years of NYR talks.</small>   
+
+***
 <!-- <div class="container">
 	<div class="column" id="left"> -->
 <a id="ragbethesda"></a>
