@@ -21,13 +21,12 @@ title: Data Science Presentations & Publications
 <!-- <div class="container">
 	<div class="column" id="left"> -->
 <a id="nyr-rag"></a>
-<p><b>RAGtime in the Big Apple: Chat with a Decade of NYR Talks </b>, New York R Conference, May 2024</p>
+<p><b><a href="https://www.youtube.com/watch?v=hFU60JpFKI0&ab_channel=LanderAnalytics">RAGtime in the Big Apple: Chat with a Decade of NYR Talks </a></b>, New York R Conference, May 2024</p>
 
 <div style="text-align:center;">
-<!-- <iframe src="https://www.youtube-nocookie.com/embed/0i_7Cn31VrU" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+<iframe src="https://www.youtube-nocookie.com/embed/hFU60JpFKI0" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
 
-<!-- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQiXhkMhzYrIcW6G0rx-E3MInjKVG10RCjS2sYRmzZYTRn1zglVm81wNqxC9DIY_RB5-nOUSdWRl8q9/pub?start=false&loop=false&delayms=3000" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGCRGiDwfh3xvqbwU-Y939LOPUyXUSIQnBozF81e_uj6hRCq2k-rGaHfb035HczG6UDzXNydlH7b5B/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGCRGiDwfh3xvqbwU-Y939LOPUyXUSIQnBozF81e_uj6hRCq2k-rGaHfb035HczG6UDzXNydlH7b5B/embed?start=false&loop=false&delayms=3000" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 **Demo App**: [Chat With a Decade of Previous NYR Talks](https://nyr.alanfeder.com/) <small>*Note: You need to input an OpenAI API Key to use it*</small>    
 <small>As the adoption of Large Language Models (LLMs) like ChatGPT has increased over the past year, there's been a growing excitement about using these technologies to query existing documents and datasets. However, training your own LLM chatbot from scratch is impossible for everyone except the largest tech companies. Retrieval-Augmented Generation (RAG) is a versatile method for addressing these challenges. I will show how this works with a live demo exploring the past 10 years of NYR talks.</small>   
