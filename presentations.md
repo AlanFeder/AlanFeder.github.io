@@ -28,7 +28,7 @@ title: Data Science Presentations & Publications
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGCRGiDwfh3xvqbwU-Y939LOPUyXUSIQnBozF81e_uj6hRCq2k-rGaHfb035HczG6UDzXNydlH7b5B/embed?start=false&loop=false&delayms=3000" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
-**Demo App**: [Chat With a Decade of Previous NYR Talks](https://nyr.alanfeder.com/) <small>*Note: You need to input an OpenAI API Key to use it*</small>    
+**Demo App**: [Chat With a Decade of Previous NYR Talks](https://nyr.alanfeder.com/) <small>*Can be used even without OpenAI API Key*</small>    
 <small>As the adoption of Large Language Models (LLMs) like ChatGPT has increased over the past year, there's been a growing excitement about using these technologies to query existing documents and datasets. However, training your own LLM chatbot from scratch is impossible for everyone except the largest tech companies. Retrieval-Augmented Generation (RAG) is a versatile method for addressing these challenges. I will show how this works with a live demo exploring the past 10 years of NYR talks.</small>   
 
 <small>Intro music by <a href="https://www.udio.com/songs/e9YZScxFKB36PCz2yJu8EF">Udio</a></small>
