@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Generated RAG - Entirely HTML/JS in-browser</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/AlanFeder/rgov-2024/refs/heads/main/favicon_io/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(135deg, #f0f2f5, #ffffff);
+            color: #343a40;
+        }
+
+        #sidebar {
+            width: 250px;
+            background: linear-gradient(135deg, #9baec8, #d3dae4);
+            padding: 20px;
+            box-sizing: border-box;
+            color: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: relative;
+            transition: width 0.3s ease;
+        }
+
+        #toggle-sidebar {
+            position: absolute;
+            top: 10px;
+            right: -25px;
+            background: #6b7b8c;
+            border: none;
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+        }
+
+        #main {
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border-left: 1px solid #e9ecef;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        #chat-container {
+            flex-grow: 1;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        #input-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #user-input {
+            flex-grow: 1;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 30px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        #user-input:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+        }
+
+        button {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 70%;
+            line-height: 1.5;
+        }
+
+        .user {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            align-self: flex-end;
+            text-align: right;
+        }
+
+        .assistant {
+            background-color: #e2e3e5;
+            color: #383d41;
+            align-self: flex-start;
+        }
+
+        .video-title {
+            cursor: pointer;
+            padding: 15px;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-title:hover {
+            background-color: #495057;
+            transform: scale(1.05);
+        }
+
+        .video-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .video-content iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 15px;
+        }
+
+        button {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        hr {
+            border: 1px solid #ffffff;
+            margin: 20px 0;
+        }
+
+        #video-results {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-container {
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <button id="toggle-sidebar" onclick="toggleSidebar()">&#9664;</button>
+        <div id="sidebar-content">
+            <h2>Settings</h2>
+            <input type="password" id="api-key" placeholder="Enter OpenAI API Key" />
+            <hr>
+            <div>
+                <p>Select model:</p>
+                <input type="radio" id="cheaper" name="model-option" value="gpt-4o-mini" checked>
+                <label for="cheaper">Cheaper</label><br>
+                <input type="radio" id="more-accurate" name="model-option" value="gpt-4o">
+                <label for="more-accurate">More Accurate</label>
+            </div>
+            <hr>
+            <h3>Contact me!</h3>
+            <div class="contact-section" style="padding: 10px 0;">
+                <img src="https://raw.githubusercontent.com/AlanFeder/rgov-2024/refs/heads/main/AJF_Headshot.jpg" width="60px">
+                <div class="contact-links">
+                    <a href="mailto:AlanFeder@gmail.com">Email</a><br>
+                    <a href="https://www.alanfeder.com/">Website</a><br>
+                    <a href="https://www.linkedin.com/in/alanfeder/">LinkedIn</a><br>
+                    <a href="https://github.com/AlanFeder">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <h1 style="font-family: 'Roboto', sans-serif;">LLM Generated RAG - Entirely HTML/JS in-browser</h1>
+        <div id="chat-container"></div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div id="video-results"></div>
+        <h3 style="font-family: 'Roboto', sans-serif;">About</h3>
+        <p style="color: #2c3e50; margin-top: 20px; margin-bottom: 10px;">
+            This app was created for Alan Feder's <a href="https://rstats.ai/gov.html">talk at the 2024 R/Gov Conference</a>.
+        </p>
+        <p>
+            The Github repository that houses all the code is <a href="https://github.com/AlanFeder/rgov-2024">here</a> -- feel free to fork it and use it on your own!
+        </p>
+        <hr>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleButton = document.getElementById('toggle-sidebar');
+            const sidebarContent = document.getElementById('sidebar-content');
+            if (sidebar.style.width === '250px' || sidebar.style.width === '') {
+                sidebar.style.width = '40px';
+                sidebarContent.style.display = 'none';
+                toggleButton.innerHTML = '&#9654;';
+            } else {
+                sidebar.style.width = '250px';
+                sidebarContent.style.display = 'block';
+                toggleButton.innerHTML = '&#9664;';
+            }
+        }
+
+        let talkInfo, embeds;
+        let currentMessageElement;
+        let accumulatedContent = '';
+
+        const SYSTEM_PROMPT = `
+You are an AI assistant that helps answer questions by searching through video transcripts. 
+I have retrieved the transcripts most likely to answer the user's question.
+Carefully read through the transcripts to find information that helps answer the question. 
+Be brief - your response should not be more than two paragraphs.
+Only use information directly stated in the provided transcripts to answer the question. 
+Do not add any information or make any claims that are not explicitly supported by the transcripts.
+If the transcripts do not contain enough information to answer the question, state that you do not have enough information to provide a complete answer.
+Format the response clearly.  If only one of the transcripts answers the question, don't reference the other and don't explain why its content is irrelevant.
+Do not speak in the first person. DO NOT write a letter, make an introduction, or salutation.
+Reference the speaker's name when you say what they said.
+`;
+
+        async function loadData() {
+            // Load talk_info
+            const talkInfoResponse = await fetch('https://raw.githubusercontent.com/AlanFeder/rgov-2024/main/data/rgov_talks.json');
+            talkInfo = await talkInfoResponse.json();
+
+            // Load embeds
+            const embedsResponse = await fetch('https://raw.githubusercontent.com/AlanFeder/rgov-2024/main/data/embeds.csv');
+            const embedsText = await embedsResponse.text();
+            const results = Papa.parse(embedsText, {
+                dynamicTyping: true,
+                skipEmptyLines: true
+            });
+            embeds = results.data;
+        }
+
+        loadData().then(() => {
+            console.log('Data loaded successfully');
+        }).catch(error => {
+            console.error('Error loading data:', error);
+        });
+
+        async function getEmbedding(text, apiKey) {
+            const modelName = document.querySelector('input[name="model-option"]:checked').value;
+            const response = await fetch('https://api.openai.com/v1/embeddings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    input: text,
+                    model: "text-embedding-3-small"
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            return result.data[0].embedding;
+        }
+
+        function cosineSimilarity(a, b) {
+            const dotProduct = tf.dot(a, b);
+            const normA = tf.norm(a);
+            const normB = tf.norm(b);
+            return tf.div(dotProduct, tf.mul(normA, normB));
+        }
+
+        function sortDocuments(queryEmbedding, documentEmbeddings) {
+            const similarities = documentEmbeddings.map(embed => 
+                cosineSimilarity(queryEmbedding, embed).arraySync()
+            );
+            const sortedIndices = similarities.map((_, i) => i)
+                .sort((a, b) => similarities[b] - similarities[a]);
+            return sortedIndices.map(i => ({ id: i, score: similarities[i] }));
+        }
+
+        function limitDocs(sortedDocs, n) {
+            const topDocs = sortedDocs.slice(0, n);
+            const topScore = topDocs[0].score;
+            const scoreThresh = Math.max(Math.min(0.6, topScore - 0.05), 0.2);
+            return topDocs.filter(doc => doc.score >= scoreThresh)
+                .map(doc => ({ ...talkInfo[doc.id], ...doc }));
+        }
+
+        function makeUserPrompt(question, keepTexts) {
+            let userPrompt = `Question: ${question}\n==============================\n`;
+            if (keepTexts.length > 0) {
+                const transcripts = keepTexts.map((doc, i) => 
+                    `Video Transcript ${i+1}\nSpeaker: ${doc.Speaker}\n${doc.transcript}`
+                ).join('\n-------\n');
+                userPrompt += transcripts;
+                userPrompt += `\n==============================\nAfter analyzing the above video transcripts, please provide a helpful answer to my question. Remember to stay within two paragraphs. Address the response to me directly. Do not use any information not explicitly supported by the transcripts. Remember to reference the speaker's name.`;
+            } else {
+                userPrompt += `No relevant video transcripts were found. Please just return a result that says something like 'I'm sorry, but the answer to ${question} was not found in the transcripts from the R/Gov Conference'`;
+            }
+            return userPrompt;
+        }
+
+        async function doRetrieval(query, apiKey, n = 3) {
+            const queryEmbedding = await getEmbedding(query, apiKey);
+            const sortedDocs = sortDocuments(queryEmbedding, embeds);
+            return limitDocs(sortedDocs, n);
+        }
+
+        async function* generateResponse(question, keepTexts, apiKey) {
+            const userPrompt = makeUserPrompt(question, keepTexts);
+            const modelName = document.querySelector('input[name="model-option"]:checked').value;
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    model: modelName,
+                    messages: [
+                        { role: "system", content: SYSTEM_PROMPT },
+                        { role: "user", content: userPrompt }
+                    ],
+                    stream: true
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }         
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+
+            while (true) {
+                const { value, done } = await reader.read();
+                if (done) break;
+                buffer += decoder.decode(value, { stream: true });
+
+                const lines = buffer.split('\n');
+                buffer = lines.pop();
+
+                for (const line of lines) {
+                    if (line.startsWith('data: ')) {
+                        const data = line.slice(6);
+                        if (data === '[DONE]') return;
+                        try {
+                            const parsed = JSON.parse(data);
+                            if (parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content) {
+                                yield parsed.choices[0].delta.content;
+                            }
+                        } catch (error) {
+                            console.error('Error parsing JSON:', error);
+                        }
+                    }
+                }
+            }
+        }
+
+        async function doRag(userInput, apiKey) {
+            const retrievedDocs = await doRetrieval(userInput, apiKey);
+            const responseGenerator = generateResponse(userInput, retrievedDocs, apiKey);
+            return { responseGenerator, retrievedDocs };
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const apiKey = document.getElementById('api-key').value;
+            
+            if (!userInput || !apiKey) {
+                alert('Please enter both a message and an API key.');
+                return;
+            }
+
+            addMessage(userInput, 'user');
+            document.getElementById('user-input').value = '';
+
+            currentMessageElement = addMessage('', 'assistant');
+            accumulatedContent = ''; // Reset accumulated content
+
+            try {
+                const { responseGenerator, retrievedDocs } = await doRag(userInput, apiKey);
+                
+                for await (const chunk of responseGenerator) {
+                    appendToMessage(chunk);
+                }
+
+                // Final parsing of any remaining content
+                currentMessageElement.innerHTML = marked.parse(accumulatedContent);
+
+                displayVideoResults(retrievedDocs);
+            } catch (error) {
+                console.error('Error:', error);
+                appendToMessage('An error occurred while processing your request.');
+            }
+        }
+
+        function addMessage(content, sender) {
+            const chatContainer = document.getElementById('chat-container');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender);
+            messageElement.innerHTML = marked.parse(content);
+            chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            return messageElement;
+        }
+
+
+        function appendToMessage(content) {
+            accumulatedContent += content;
+            
+            // Split the content by double line breaks to separate paragraphs
+            const paragraphs = accumulatedContent.split('\n\n');
+            
+            // Parse all complete paragraphs with markdown
+            const parsedParagraphs = paragraphs.slice(0, -1).map(para => marked.parse(para)).join('');
+            
+            // Parse the last (possibly incomplete) paragraph
+            const lastParagraph = marked.parse(paragraphs[paragraphs.length - 1]);
+            
+            // Update the HTML content
+            currentMessageElement.innerHTML = parsedParagraphs + lastParagraph;
+
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function displayVideoResults(retrievedDocs) {
+            const videoResultsContainer = document.getElementById('video-results');
+            videoResultsContainer.innerHTML = '<h3>Retrieved Videos:</h3>';
+
+            retrievedDocs.forEach((doc, index) => {
+                const videoContainer = document.createElement('div');
+                videoContainer.classList.add('video-container');
+
+                const videoTitle = document.createElement('div');
+                videoTitle.classList.add('video-title');
+                videoTitle.textContent = `Video ${index + 1}: ${doc.Title}`;
+                videoTitle.onclick = () => toggleVideoContent(index);
+
+                const videoContent = document.createElement('div');
+                videoContent.classList.add('video-content');
+                videoContent.id = `video-content-${index}`;
+
+                const youtubeEmbed = document.createElement('iframe');
+                youtubeEmbed.src = `https://www.youtube.com/embed/${doc.VideoURL.split('v=')[1]}`;
+                youtubeEmbed.frameborder = '0';
+                youtubeEmbed.allowfullscreen = true;
+
+                const transcriptToggle = document.createElement('button');
+                transcriptToggle.textContent = 'Toggle Transcript';
+                transcriptToggle.onclick = () => toggleTranscript(index);
+
+                const transcript = document.createElement('div');
+                transcript.id = `transcript-${index}`;
+                transcript.style.display = 'none';
+                transcript.textContent = doc.transcript;
+
+                videoContent.appendChild(youtubeEmbed);
+                videoContent.appendChild(transcriptToggle);
+                videoContent.appendChild(transcript);
+
+                videoContainer.appendChild(videoTitle);
+                videoContainer.appendChild(videoContent);
+
+                videoResultsContainer.appendChild(videoContainer);
+            });
+        }
+
+        function toggleVideoContent(index) {
+            const content = document.getElementById(`video-content-${index}`);
+            content.style.display = content.style.display === 'none'? 'block' : 'none';
+        }
+
+        function toggleTranscript(index) {
+            const transcript = document.getElementById(`transcript-${index}`);
+            transcript.style.display = transcript.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
