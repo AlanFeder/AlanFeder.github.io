@@ -31,7 +31,7 @@ title: Data Science Presentations & Publications
 
 <div style="text-align: center;">
     <a href="https://www.alanfeder.com/dcr_rag" target="_blank">
-        <iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 65%; height: 450px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 60%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </a>
 </div>
 
