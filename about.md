@@ -5,6 +5,7 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>Welcome! I am an experienced data scientist with over ten years of expertise leading projects that apply artificial intelligence, machine learning, and natural language processing to create business value. </p>
+<p>I actively collaborate with product stakeholders to align technical solutions with business objectives and take a hands-on approach in coding using generative AI, NLP, and many other ML methods.</p>
 <p>I currently live in Maryland, right outside Washington, DC. </p>
 
 

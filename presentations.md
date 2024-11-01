@@ -6,6 +6,7 @@ title: Data Science Presentations & Publications
 ## Table of Contents
 
 - [Presentations](#presentations)
+  - [he Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks](#dcr-2024)
   - [RAGtime in the Big Apple: Chat with a Decade of NYR Talks](#nyr-rag)
   - [RAGs to Riches: Using ChatGPT to Query Documents & Limit Hallucinations](#ragbethesda)
   - [NLP in Finance](#dssalon1)
