@@ -25,14 +25,14 @@ layout: page
 		<ul class="ai-list2">
 			<li><strong>AI Models</strong>
 				<ul>
-					<li><code>gpt-4o</code></li>
-					<li><code>llama3.1 (8b)</code></li>
-					<li><code>mistral (7b)</code></li>
-					<li><code>claude-3-5-sonnet</code></li>
-					<li><code>bert-base-uncased</code></li>
-					<li><code>DistilBERT</code></li>
-					<li><code>text-embedding-3-small</code></li>
-					<li><code>GIST-Embedding-v0</code></li>
+					<li>gpt-4o</li>
+					<li>llama3.1 (8b)</li>
+					<li>mistral (7b)</li>
+					<li>claude-3-5-sonnet</li>
+					<li>bert-base-uncased</li>
+					<li>DistilBERT</li>
+					<li>text-embedding-3-small</li>
+					<li>GIST-Embedding-v0</li>
 				</ul>
 			</li>
 			<li><strong>AI Tools</strong>

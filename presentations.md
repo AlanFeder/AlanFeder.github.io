@@ -6,7 +6,7 @@ title: Data Science Presentations & Publications
 ## Table of Contents
 
 - [Presentations](#presentations)
-  - [he Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks](#dcr-2024)
+  - [The Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks](#dcr-2024)
   - [RAGtime in the Big Apple: Chat with a Decade of NYR Talks](#nyr-rag)
   - [RAGs to Riches: Using ChatGPT to Query Documents & Limit Hallucinations](#ragbethesda)
   - [NLP in Finance](#dssalon1)
@@ -25,10 +25,15 @@ title: Data Science Presentations & Publications
 <!-- <p><b><a href="https://www.youtube.com/watch?v=hFU60JpFKI0&ab_channel=LanderAnalytics">RAGtime in the Big Apple: Chat with a Decade of NYR Talks </a></b>, New York R Conference, May 2024</p> -->
 <p><b>The Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks </b>, Government & Public Sector R Conference, October 2024</p>
 
-<!-- <div style="text-align:center;">
-<iframe src="https://www.youtube-nocookie.com/embed/hFU60JpFKI0" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+<div style="text-align:center;">
+<!-- <iframe src="https://www.youtube-nocookie.com/embed/hFU60JpFKI0" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> --> 
 
-<iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<div style="text-align: center;">
+    <a href="https://www.alanfeder.com/dcr_rag" target="_blank">
+        <iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 65%; height: 450px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </a>
+</div>
 
 </div>
 **Demo Apps**: [Streamlit](https://www.alanfeder.com/dcr_rag/streamlit_lite.html), [Shiny](https://www.alanfeder.com/dcr_rag/shinylive1/), [HTML](https://www.alanfeder.com/dcr_rag/html_app.html)  
