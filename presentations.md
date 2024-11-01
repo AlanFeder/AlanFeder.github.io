@@ -20,6 +20,24 @@ title: Data Science Presentations & Publications
 
 <!-- <div class="container">
 	<div class="column" id="left"> -->
+<a id="dcr-2024"></a>
+<!-- <p><b><a href="https://www.youtube.com/watch?v=hFU60JpFKI0&ab_channel=LanderAnalytics">RAGtime in the Big Apple: Chat with a Decade of NYR Talks </a></b>, New York R Conference, May 2024</p> -->
+<p><b>The Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks </b>, Government & Public Sector R Conference, October 2024</p>
+
+<!-- <div style="text-align:center;">
+<iframe src="https://www.youtube-nocookie.com/embed/hFU60JpFKI0" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+
+<iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+</div>
+**Demo Apps**: [Streamlit](https://www.alanfeder.com/dcr_rag/streamlit_lite.html), [Shiny](https://www.alanfeder.com/dcr_rag/shinylive1/), [HTML](https://www.alanfeder.com/dcr_rag/html_app.html)  
+<small>Shiny has long been the go-to for data scientists creating web applications in R, but Python offers a plethora of alternatives that can be overwhelming to choose from. This talk will demonstrate the creation of a single application using three popular Python tools: PyShiny, Streamlit, and Gradio. We'll explore the strengths and weaknesses of each framework, through a live demonstration of each. This comparison will provide you with a practical roadmap for selecting the ideal Python web app framework to suit your specific data science projects.</small>   
+
+
+***
+
+<!-- <div class="container">
+	<div class="column" id="left"> -->
 <a id="nyr-rag"></a>
 <p><b><a href="https://www.youtube.com/watch?v=hFU60JpFKI0&ab_channel=LanderAnalytics">RAGtime in the Big Apple: Chat with a Decade of NYR Talks </a></b>, New York R Conference, May 2024</p>
 
