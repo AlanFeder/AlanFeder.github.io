@@ -22,16 +22,16 @@ title: Data Science Presentations & Publications
 <!-- <div class="container">
 	<div class="column" id="left"> -->
 <a id="dcr-2024"></a>
-<!-- <p><b><a href="https://www.youtube.com/watch?v=hFU60JpFKI0&ab_channel=LanderAnalytics">RAGtime in the Big Apple: Chat with a Decade of NYR Talks </a></b>, New York R Conference, May 2024</p> -->
-<p><b>The Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks </b>, Government & Public Sector R Conference, October 2024</p>
+<p><b><a href="https://www.youtube.com/watch?v=P_ZRH64NcGQ&ab_channel=LanderAnalytics">The Good, the Bad, and the Shiny: A Guide to Choosing Python Web App Frameworks </a></b>, Government & Public Sector R Conference, October 2024</p>
 
 <div style="text-align:center;">
 <!-- <iframe src="https://www.youtube-nocookie.com/embed/hFU60JpFKI0" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> --> 
 
 
 <div style="text-align: center;">
+  <iframe src="https://www.youtube-nocookie.com/embed/P_ZRH64NcGQ" title="YouTube video player" frameborder="0" style="width: 45%; height: 315px; display: inline-block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
     <a href="https://www.alanfeder.com/dcr_rag" target="_blank">
-        <iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 60%; height: 315px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://www.alanfeder.com/dcr_rag" frameborder="0" style="width: 50%; height: 270px; display: inline-block;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </a>
 </div>
 
