@@ -110,9 +110,9 @@ layout: page
 </div>
 
 <h1>Background</h1>
-<p>I am currently a Staff LLM Data Scientist at <a href="https://magnifi.com/">Magnifi</a> by <a href="https://tifin.com">TIFIN</a>, where I build an AI-powered copilot for investments. I also work as a freelance consultant across various sectors, including higher education, cybersecurity, and HealthTech. Additionally, I have served as an adjunct professor at the University of Baltimore Merrick School of Business.</p>
+<p>I am currently an SME Data Scientist at <a href="https://www.mantech.com/">ManTech</a>, working to implement AI in the federal government, focusing on security.  I also work as a freelance consultant across various sectors, including higher education, HealthTech, and finance.  Additionally, I have served as an adjunct professor at the [University of Baltimore Merrick School of Business](https://www.ubalt.edu/schools-and-colleges/merrick-school-of-business/index.cfm).</p>
 
-<p>Previously, I worked at Johnson & Johnson, applying AI to advance clinical trial development. Before that, as a Senior Principal Data Scientist at Invesco, I leveraged AI/ML to enhance performance in multiple areas, including real estate, fund management, ETF development, and government affairs. I also held a data science role at AIG on their Science team, working across investments and insurance to develop models for travel insurance and workers' compensation. My career began at Swiss Re, where I trained as a Casualty Pricing Actuary, working in both reinsurance and direct insurance.</p>
+<p>Previously, I was a Staff LLM Data Scientist at <a href="https://magnifi.com/">Magnifi</a> by <a href="https://tifin.com">TIFIN</a>, where I build an AI-powered copilot for investments.  Before that, as a Senior Principal Data Scientist at Invesco, I leveraged AI/ML to enhance performance in multiple areas, including real estate, fund management, ETF development, and government affairs. I also held a data science role at AIG on their Science team, working across investments and insurance to develop models for travel insurance and workers' compensation. My career began at Swiss Re, where I trained as a Casualty Pricing Actuary, working in both reinsurance and direct insurance.</p>
 
 <p>I hold a BA in Mathematics (with a minor in Economics) and an MA in Statistics, both from Columbia University.</p>
 
